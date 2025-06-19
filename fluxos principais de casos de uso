@@ -1,0 +1,264 @@
+Casos de Uso - Loja Online de Discos de Vinil
+
+Caso de Uso 1: Criar Conta no Sistema
+
+Participantes: Usuário
+
+Descrição:
+O usuário cria uma conta para acessar as funcionalidades da loja, como realizar compras e avaliar discos.
+
+Fluxo Principal:
+	1.	O usuário acessa a tela de cadastro.
+	2.	O sistema solicita nome completo, email, senha e endereço de entrega.
+	3.	O usuário preenche os dados e confirma.
+	4.	O sistema valida as informações e verifica se o email já está cadastrado.
+	5.	O sistema cria a conta e redireciona o usuário para a página inicial.
+
+Fluxos Alternativos:
+	•	Email já cadastrado: o sistema informa que o email já está em uso e sugere redefinir a senha.
+	•	Senha inválida: o sistema orienta que a senha deve ter entre 8 e 16 caracteres, incluindo letra maiúscula, número e caractere especial.
+	•	Campos obrigatórios não preenchidos: o sistema impede a criação da conta e informa que todos os campos devem ser preenchidos.
+
+⸻
+
+Caso de Uso 2: Acessar Conta (Login)
+
+Participantes: Usuário
+
+Descrição:
+O usuário acessa a conta para realizar compras e acessar recursos personalizados.
+
+Fluxo Principal:
+	1.	O usuário acessa a tela de login.
+	2.	O usuário informa email e senha.
+	3.	O sistema valida as credenciais.
+	4.	O sistema autentica o usuário e direciona para a página inicial.
+
+Fluxos Alternativos:
+	•	Email não cadastrado: o sistema informa que o email não possui cadastro e oferece a opção de criar uma conta.
+	•	Senha incorreta: o sistema informa que a senha está incorreta e permite novas tentativas.
+	•	Campos em branco: o sistema solicita o preenchimento de todos os campos obrigatórios.
+
+⸻
+
+Caso de Uso 3: Recuperar Senha
+
+Participantes: Usuário
+
+Descrição:
+Permite ao usuário redefinir a senha caso tenha esquecido.
+
+Fluxo Principal:
+	1.	O usuário seleciona “Esqueci minha senha” na tela de login.
+	2.	O sistema solicita o email cadastrado.
+	3.	O sistema envia um link de redefinição de senha.
+	4.	O usuário acessa o link, cria uma nova senha e confirma.
+	5.	O sistema salva a nova senha e redireciona o usuário para a tela de login.
+
+Fluxo Alternativo:
+	•	Email não encontrado: o sistema informa que o email não está cadastrado.
+
+⸻
+
+Caso de Uso 4: Pesquisar Disco por Nome
+
+Participantes: Usuário
+
+Descrição:
+O usuário busca discos específicos digitando o nome.
+
+Fluxo Principal:
+	1.	O usuário digita o nome do disco no campo de pesquisa.
+	2.	O sistema realiza a busca no catálogo.
+	3.	O sistema exibe os resultados correspondentes.
+
+Fluxo Alternativo:
+	•	Nenhum disco encontrado: o sistema informa que não há resultados e sugere verificar a ortografia ou buscar por outro termo.
+
+⸻
+
+Caso de Uso 5: Buscar Discos por Gênero Musical
+
+Participantes: Usuário
+
+Descrição:
+O usuário pode navegar por discos organizados por gênero musical.
+
+Fluxo Principal:
+	1.	O usuário acessa o menu de gêneros musicais.
+	2.	O sistema exibe todos os gêneros disponíveis.
+	3.	O usuário seleciona um gênero.
+	4.	O sistema apresenta os discos associados ao gênero selecionado.
+
+⸻
+
+Caso de Uso 6: Visualizar Detalhes do Disco
+
+Participantes: Usuário
+
+Descrição:
+Permite ao usuário visualizar informações detalhadas de um disco.
+
+Fluxo Principal:
+	1.	O usuário seleciona um disco na listagem.
+	2.	O sistema exibe a capa, nome, artista, gênero, ano de lançamento, sinopse, preço, link de reprodução e média de avaliações.
+	3.	O usuário pode adicionar o disco ao carrinho, avaliar ou retornar à listagem.
+
+⸻
+
+Caso de Uso 7: Avaliar Disco
+
+Participantes: Usuário
+
+Descrição:
+O usuário pode avaliar um disco após a compra.
+
+Fluxo Principal:
+	1.	O usuário acessa o histórico de pedidos ou a página do disco.
+	2.	O sistema permite selecionar a avaliação em estrelas.
+	3.	O usuário atribui uma nota e pode escrever um comentário.
+	4.	O sistema registra a avaliação e atualiza a média de avaliações.
+
+⸻
+
+Caso de Uso 8: Adicionar Disco ao Carrinho
+
+Participantes: Usuário
+
+Descrição:
+O usuário adiciona discos ao carrinho de compras.
+
+Fluxo Principal:
+	1.	O usuário acessa a página de um disco.
+	2.	O usuário seleciona a opção “Adicionar ao Carrinho”.
+	3.	O sistema confirma a adição e atualiza o carrinho.
+
+⸻
+
+Caso de Uso 9: Finalizar Compra
+
+Participantes: Usuário
+
+Descrição:
+O usuário realiza o processo de compra dos discos adicionados ao carrinho.
+
+Fluxo Principal:
+	1.	O usuário acessa o carrinho.
+	2.	O sistema exibe o resumo da compra, incluindo discos selecionados, quantidades, preços e endereço de entrega.
+	3.	O usuário confirma as informações e prossegue para o pagamento.
+	4.	O usuário escolhe a forma de pagamento (cartão de crédito, débito ou boleto).
+	5.	O sistema processa o pagamento.
+	6.	O sistema confirma o pedido e informa o prazo de entrega.
+
+Fluxos Alternativos:
+	•	Pagamento recusado: o sistema informa que o pagamento falhou e solicita nova tentativa ou escolha de outro método.
+	•	Carrinho vazio: o sistema bloqueia o avanço para o pagamento e solicita que o usuário adicione produtos.
+
+⸻
+
+Caso de Uso 10: Consultar Histórico de Pedidos
+
+Participantes: Usuário
+
+Descrição:
+O usuário pode visualizar todas as compras realizadas.
+
+Fluxo Principal:
+	1.	O usuário acessa o perfil e seleciona “Histórico de Pedidos”.
+	2.	O sistema exibe a lista de pedidos anteriores com datas, produtos comprados, status e avaliações realizadas.
+	3.	O usuário pode reavaliar produtos ou visualizar detalhes das compras.
+
+⸻
+
+Caso de Uso 11: Excluir Conta
+
+Participantes: Usuário, Administrador
+
+Descrição:
+Permite que o usuário ou administrador exclua uma conta do sistema.
+
+Fluxo Principal:
+	1.	O usuário solicita a exclusão da conta no perfil.
+	2.	O sistema solicita a senha para confirmação.
+	3.	O sistema valida a senha e remove a conta e os dados associados.
+	4.	O sistema exibe a mensagem de confirmação e redireciona para a página inicial.
+
+Fluxo Alternativo:
+	•	Senha incorreta: o sistema impede a exclusão da conta e solicita nova tentativa.
+
+⸻
+
+Caso de Uso 12: Sair da Conta (Logout)
+
+Participantes: Usuário, Administrador
+
+Descrição:
+O usuário encerra a sessão atual.
+
+Fluxo Principal:
+	1.	O usuário seleciona a opção “Sair”.
+	2.	O sistema confirma o logout e encerra a sessão.
+	3.	O sistema redireciona para a tela inicial.
+
+⸻
+
+Caso de Uso 13: Adicionar Disco ao Sistema
+
+Participantes: Administrador
+
+Descrição:
+Permite ao administrador cadastrar novos discos no catálogo da loja.
+
+Fluxo Principal:
+	1.	O administrador acessa a funcionalidade “Adicionar Disco”.
+	2.	O sistema solicita informações como nome, artista, gênero, ano de lançamento, sinopse, preço, capa e link de reprodução.
+	3.	O administrador preenche os dados e confirma a operação.
+	4.	O sistema salva o disco no catálogo.
+
+Fluxos Alternativos:
+	•	Campos obrigatórios não preenchidos: o sistema impede o cadastro e solicita o preenchimento completo.
+
+⸻
+
+Caso de Uso 14: Editar Informações de Disco
+
+Participantes: Administrador
+
+Descrição:
+O administrador pode atualizar as informações de um disco.
+
+Fluxo Principal:
+	1.	O administrador localiza o disco a ser editado.
+	2.	O sistema exibe os dados atuais.
+	3.	O administrador altera as informações e confirma.
+	4.	O sistema atualiza os dados no catálogo.
+
+⸻
+
+Caso de Uso 15: Excluir Disco
+
+Participantes: Administrador
+
+Descrição:
+O administrador pode remover um disco do catálogo da loja.
+
+Fluxo Principal:
+	1.	O administrador seleciona o disco a ser excluído.
+	2.	O sistema solicita confirmação da exclusão.
+	3.	O sistema remove o disco do banco de dados e exibe mensagem de confirmação.
+
+⸻
+
+Caso de Uso 16: Gerenciar Gêneros Musicais
+
+Participantes: Administrador
+
+Descrição:
+Permite ao administrador criar, editar ou remover gêneros musicais.
+
+Fluxo Principal:
+	1.	O administrador acessa a área de gerenciamento de gêneros.
+	2.	O sistema permite criar um novo gênero, editar um existente ou excluir um gênero.
+
+Fluxos Alternativos:
+	•	Nome do gênero não informado: o sistema bloqueia a operação e solicita o preenchimento.
